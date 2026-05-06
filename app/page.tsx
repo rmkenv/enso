@@ -18,41 +18,7 @@ export default function Home() {
                      summary.trend === 'weakening' ? '↑' : '→';
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <header style={{
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        padding: '10px 20px', borderBottom: '1px solid rgba(255,255,255,0.06)',
-        background: '#0c1015', position: 'sticky', top: 0, zIndex: 50,
-      }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-              <circle cx="11" cy="11" r="10" stroke={phaseColor} strokeWidth="1.5" opacity="0.6"/>
-              <path d="M3 11 Q11 2 19 11 Q11 20 3 11Z" fill={phaseColor} opacity="0.3"/>
-              <circle cx="11" cy="11" r="3" fill={phaseColor}/>
-            </svg>
-            <span style={{ fontFamily: 'IBM Plex Mono', fontWeight: 600, fontSize: 13, letterSpacing: '0.15em', color: '#e8eaf0' }}>
-              ENSO<span style={{ color: phaseColor }}>AGRI</span>
-            </span>
-          </div>
-          <div style={{ height: 16, width: 1, background: 'rgba(255,255,255,0.08)' }} />
-          <span style={{ fontSize: 10, color: '#3d4455', fontFamily: 'IBM Plex Mono', letterSpacing: '0.08em' }}>
-            CLIMATE SIGNAL · COMMODITY INTELLIGENCE
-          </span>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            <span className="live-dot" />
-            <span style={{ fontSize: 10, color: '#3d4455', fontFamily: 'IBM Plex Mono' }}>LIVE</span>
-          </div>
-          <span style={{
-            fontSize: 10, padding: '3px 10px', borderRadius: 3,
-            border: `1px solid ${phaseColor}40`, color: phaseColor,
-            fontFamily: 'IBM Plex Mono', fontWeight: 600, letterSpacing: '0.1em',
-          }}>{phaseName}</span>
-        </div>
-      </header>
-
+    <div style={{ minHeight: 'calc(100vh - 44px)', display: 'flex', flexDirection: 'column' }}>
       <TickerTape />
 
       <main style={{ flex: 1, display: 'grid', gridTemplateColumns: '260px 1fr', minHeight: 0 }}>
