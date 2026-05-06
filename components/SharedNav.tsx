@@ -13,6 +13,7 @@ export function SharedNav() {
   const tabs = [
     { href: '/',       label: 'AGRI',   sub: 'Commodities' },
     { href: '/energy', label: 'ENERGY', sub: 'Power & Fuels' },
+    { href: '/map',    label: 'MAP',    sub: 'Signal Atlas' },
   ];
 
   return (

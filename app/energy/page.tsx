@@ -179,28 +179,9 @@ export default function EnergyPage() {
                 <ONIChart />
               </div>
 
-              {/* Storage scenario */}
+              {/* Storage - header + legend now self-contained in StorageChart */}
               <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
-                  <div style={{ fontSize: 9, letterSpacing: '0.12em', color: '#3d4455' }}>
-                    US NAT GAS STORAGE · ENSO SCENARIOS (BCF)
-                  </div>
-                </div>
                 <StorageChart activePhase={activePhase} />
-                {/* Storage chart legend */}
-                <div style={{ display: 'flex', gap: 14, marginTop: 8, flexWrap: 'wrap' }}>
-                  {[
-                    { label: 'El Niño', color: '#f59e0b' },
-                    { label: 'Neutral', color: '#6b7280' },
-                    { label: 'La Niña', color: '#3b82f6' },
-                    { label: '5yr Avg', color: 'rgba(255,255,255,0.2)' },
-                  ].map(l => (
-                    <span key={l.label} style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 10, color: '#3d4455' }}>
-                      <span style={{ display: 'inline-block', width: 20, height: 2, background: l.color, borderRadius: 1 }} />
-                      {l.label}
-                    </span>
-                  ))}
-                </div>
               </div>
             </div>
           </div>
