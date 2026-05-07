@@ -125,10 +125,10 @@ export default function MapPage() {
       </div>
 
       {/* Main: map + sidebar */}
-      <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '1fr 280px', minHeight: 0 }}>
+      <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '1fr 280px', minHeight: 0, height: '100%' }}>
 
         {/* Map */}
-        <div style={{ position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'relative', overflow: 'hidden', height: '100%' }}>
           <ENSOMap
             phase={activePhase}
             sectorFilter={sectorFilter}
